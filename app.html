@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <title>Web Standards Summit 2026</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Web Standards Summit 2026</h1>
+      <p>
+        <!--  can directly use <p>September 18</p> but wont create semnantic meaning  
+                       with <time> tag Search Engines can recognize event dates easily.-->
+
+        <time datetime="2026-09-18">September 18</time>-
+        <time datetime="2026-09-20">20, 2026</time><br />
+        Berlin Conference Center, Berlin, Germany
+      </p>
+
+      <!--  Only put the descrip. in header when it is small.
+                       if large put in the main-->
+      <p>
+        Web Standards Summit 2026 brings together developers, designers, and
+        accessibility experts to discuss the future of open, interoperable, and
+        inclusive web technologies .
+      </p>
+
+      <!--   Nav should be in the header bcz it's a Page level navigation
+                    and users expect it early-->
+      <nav aria-label="Primary">
+        <!-- tells of primary navigation-->
+        <ul>
+          <li><a href="#about">About the Summit</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#contact">Contact details</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Main contain primary part of page. *Only One main per Page -->
+
+      <section id="about">
+        <!-- Section tag used bcz it potrays a region inside main-->
+
+        <h2 id="about-heading">About the Summit</h2>
+        <p>
+          Web Standards Summit 2026 focuses on practical techniques and emerging
+          standards that help teams build fast, accessible, and future-friendly
+          web experiences.
+        </p>
+
+        <section id="key-terms">
+          <h3 id="key-terms-heading">Key terms</h3>
+
+          <dl>
+            <!-- Description List <dl> tag  : list of terms & descriptons
+                          <dt> :  term
+                          <dd> : description     we can use <ul> or <p> but they wont make a relationship betn term & descript.  -->
+            <dt>HTML</dt>
+            <dd>
+              HyperText Markup Language, the standard markup language used to
+              define the structure and meaning of content on the web.
+            </dd>
+
+            <dt>CSS</dt>
+            <dd>
+              Cascading Style Sheets, the language used to control the
+              presentation and visual layout of HTML documents.
+            </dd>
+
+            <dt>Web Accessibility</dt>
+            <dd>
+              The practice of designing and developing websites so that people
+              with disabilities can perceive, understand, navigate, and interact
+              with the web.
+            </dd>
+          </dl>
+        </section>
+      </section>
+
+      <section id="schedule">
+        <h2 id="schedule-heading">Conference Schedule</h2>
+        <p>
+          The summit spans three days of talks, workshops, and networking
+          focused on modern web standards.
+        </p>
+
+        <section id="schedule-table-section">
+          <table id="schedule-table">
+            <caption id="schedule-table-caption">
+              Day 1 —
+              <time datetime="2026-09-18">Friday, September 18, 2026</time>
+            </caption>
+            <thead>
+              <tr>
+                <!-- using scope is imp. bcz the  Header applies to all cells in that column
+                                    Without scope, the relationship can be ambiguous, in complex tables.-->
+                <th scope="col">Time</th>
+                <th scope="col">Session</th>
+                <th scope="col">Speaker</th>
+                <th scope="col">Room</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00-10:00</td>
+                <td>Opening Keynote: The State of Web Standards</td>
+                <td>Alex Rivera</td>
+                <td>Auditorium A</td>
+              </tr>
+              <tr>
+                <td>10:15-11:00</td>
+                <td>Semantic HTML in Large Applications</td>
+                <td>Priya Desai</td>
+                <td>Room 101</td>
+              </tr>
+              <tr>
+                <td>11:15-12:00</td>
+                <td>Modern CSS Layout: Grid and Flexbox</td>
+                <td>Jonas Meier</td>
+                <td>Room 102</td>
+              </tr>
+              <tr>
+                <td>13:30-14:30</td>
+                <td>Inclusive Design and Web Accessibility</td>
+                <td>Fatima Khan</td>
+                <td>Room 103</td>
+              </tr>
+              <tr>
+                <td>14:45-15:30</td>
+                <td>Performance, Core Web Vitals, and Standards</td>
+                <td>Luca Rossi</td>
+                <td>Room 104</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="speakers">
+        <h2 id="speakers-heading">Featured Speakers</h2>
+
+        <!-- Why not Use Section here ?  instead of article 
+                                =>  Section is used for grouping of items togther.
+                                =>  Article is used to represnet slef-contained indepenedet content -->
+        <article id="Alex-article">
+          <h3>Alex Rivera</h3>
+          <!-- We dont ids to all tags inside article bcz we can fetch with article-name & tag name-->
+          <p>
+            Alex is a standards advocate and chair of several working groups,
+            helping browser vendors and developers collaborate on interoperable
+            web features.
+          </p>
+
+          <h4>Topics</h4>
+          <ul>
+            <li>The State of Web Standards in 2026</li>
+            <li>Interoperability Across Modern Browsers</li>
+            <li>Building for the Next Decade of the Web</li>
+          </ul>
+        </article>
+
+        <article id="Priya-article">
+          <h3>Priya Desai</h3>
+          <p>
+            Priya is a frontend architect focusing on semantic markup,
+            maintainable design systems, and accessible component libraries for
+            large-scale products.
+          </p>
+
+          <h4>Topics</h4>
+          <ul>
+            <li>Semantic HTML in Design Systems</li>
+            <li>Structuring Complex Interfaces Accessibly</li>
+            <li>Documentation-Driven Frontend Architecture</li>
+          </ul>
+        </article>
+
+        <article id="Fatima-article">
+          <h3>Fatima Khan</h3>
+          <p>
+            Fatima is an accessibility specialist who helps organizations
+            integrate inclusive design into every stage of their product
+            lifecycle.
+          </p>
+
+          <h4>Topics</h4>
+          <ul>
+            <li>Practical Web Accessibility Testing</li>
+            <li>Designing for Assistive Technologies</li>
+            <li>Accessibility as a Team Practice</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="registration">
+        <h2 id="registration-heading">Registration</h2>
+        <p>
+          Reserve your seat for Web Standards Summit 2026 by completing the
+          registration form below.
+        </p>
+
+        <form action="#" method="post">
+          <!-- action send the formdata to the url specified.-->
+          <fieldset>
+            <legend>Attendee information</legend>
+            <br />
+            <div>
+              <label for="full-name">Full name</label>
+              <!-- for[label] == id[input] so that the browser can match the relationship-->
+              <br />
+              <!-- for spacing betweem the text-->
+              <input type="text" id="full-name" name="full-name" required />
+            </div>
+            <br />
+            <!-- for spacing between groups can also use <br/> -->
+
+            <div>
+              <label for="email">Email address</label>
+              <br />
+              <input type="email" id="email" name="email" required />
+            </div>
+            <br />
+
+            <div>
+              <label for="role">Role</label>
+              <br />
+              <select id="role" name="role">
+                <!-- if developer selected it sends role=="developer"-->
+                <option value="">Select your role</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="accessibility">Accessibility Specialist</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <br />
+
+            <div>
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter"
+                >Subscribe to the Web Standards Summit newsletter</label
+              >
+            </div>
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Confirmation</legend>
+            <br />
+            <button type="submit">Submit registration</button>
+            <br />
+            <br />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        For questions about tickets, sponsorships, or speaking opportunities,
+        contact the organizing team.
+      </p>
+
+      <address>
+        <!-- <address> element in HTML represents contact information for the author or owner of a document or section.-->
+        <p>
+          Web Standards Summit Organizing Committee<br />
+          Email:
+          <a href="mailto:info@webstandardssummit.example">
+            info@webstandardssummit.example
+          </a>
+        </p>
+      </address>
+      <!-- Browsers usually render it in italics and may add spacing — this is default styling for semantic purposes.-->
+
+      <p>© 2026 Web Standards Summit. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
