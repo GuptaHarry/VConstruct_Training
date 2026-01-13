@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width , initial-scale=1" />
     <title>Web Standards Summit 2026</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
+    <header class="page-header">
       <h1>Web Standards Summit 2026</h1>
       <p>
         <!--  can directly use <p>September 18</p> but wont create semnantic meaning  
@@ -28,35 +29,35 @@
 
       <!--   Nav should be in the header bcz it's a Page level navigation
                     and users expect it early-->
-      <nav aria-label="Primary">
+      <nav aria-label="Primary" class="primary-nav">
         <!-- tells of primary navigation-->
-        <ul>
-          <li><a href="#about">About the Summit</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#registration">Registration</a></li>
-          <li><a href="#contact">Contact details</a></li>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about">About the Summit</a></li>
+          <li class="nav-item"><a href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a href="#speakers">Speakers</a></li>
+          <li class="nav-item"><a href="#registration">Registration</a></li>
+          <li class="nav-item"><a href="#contact">Contact details</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="content-wrapper">
       <!-- Main contain primary part of page. *Only One main per Page -->
 
-      <section id="about">
+      <section id="about" class="info-card">
         <!-- Section tag used bcz it potrays a region inside main-->
 
-        <h2 id="about-heading">About the Summit</h2>
+        <h2 id="about-heading" class="section-title">About the Summit</h2>
         <p>
           Web Standards Summit 2026 focuses on practical techniques and emerging
           standards that help teams build fast, accessible, and future-friendly
           web experiences.
         </p>
 
-        <section id="key-terms">
+        <section id="key-terms" class="sub-section">
           <h3 id="key-terms-heading">Key terms</h3>
 
-          <dl>
+          <dl class="definition-list">
             <!-- Description List <dl> tag  : list of terms & descriptons
                           <dt> :  term
                           <dd> : description     we can use <ul> or <p> but they wont make a relationship betn term & descript.  -->
@@ -82,16 +83,16 @@
         </section>
       </section>
 
-      <section id="schedule">
-        <h2 id="schedule-heading">Conference Schedule</h2>
+      <section id="schedule" class="info-card">
+        <h2 id="schedule-heading" class="section-title">Conference Schedule</h2>
         <p>
           The summit spans three days of talks, workshops, and networking
           focused on modern web standards.
         </p>
 
         <section id="schedule-table-section">
-          <table id="schedule-table">
-            <caption id="schedule-table-caption">
+          <table id="schedule-table" class="styled-table">
+            <caption id="schedule-table-caption" class="table-caption">
               Day 1 —
               <time datetime="2026-09-18">Friday, September 18, 2026</time>
             </caption>
@@ -141,13 +142,13 @@
         </section>
       </section>
 
-      <section id="speakers">
-        <h2 id="speakers-heading">Featured Speakers</h2>
+      <section id="speakers" class="info-card speaker-grid">
+        <h2 id="speakers-heading" class="section-title">Featured Speakers</h2>
 
         <!-- Why not Use Section here ?  instead of article 
                                 =>  Section is used for grouping of items togther.
                                 =>  Article is used to represnet slef-contained indepenedet content -->
-        <article id="Alex-article">
+        <article id="Alex-article" class="speaker-card">
           <h3>Alex Rivera</h3>
           <!-- We dont ids to all tags inside article bcz we can fetch with article-name & tag name-->
           <p>
@@ -164,7 +165,7 @@
           </ul>
         </article>
 
-        <article id="Priya-article">
+        <article id="Priya-article" class="speaker-card">
           <h3>Priya Desai</h3>
           <p>
             Priya is a frontend architect focusing on semantic markup,
@@ -180,7 +181,7 @@
           </ul>
         </article>
 
-        <article id="Fatima-article">
+        <article id="Fatima-article" class="speaker-card">
           <h3>Fatima Khan</h3>
           <p>
             Fatima is an accessibility specialist who helps organizations
@@ -197,16 +198,16 @@
         </article>
       </section>
 
-      <section id="registration">
-        <h2 id="registration-heading">Registration</h2>
+      <section id="registration" class="info-card">
+        <h2 id="registration-heading" class="section-title">Registration</h2>
         <p>
           Reserve your seat for Web Standards Summit 2026 by completing the
           registration form below.
         </p>
 
-        <form action="#" method="post">
+        <form action="#" method="post" class="signup-form">
           <!-- action send the formdata to the url specified.-->
-          <fieldset>
+          <fieldset class="form-block">
             <legend>Attendee information</legend>
             <br />
             <div>
@@ -250,7 +251,7 @@
           </fieldset>
           <br />
 
-          <fieldset>
+          <fieldset class="form-submit">
             <legend>Confirmation</legend>
             <br />
             <button type="submit">Submit registration</button>
@@ -261,7 +262,7 @@
       </section>
     </main>
 
-    <footer id="contact">
+    <footer id="contact" class="info-card footer-card">
       <h2 id="contact-heading">Contact</h2>
       <p>
         For questions about tickets, sponsorships, or speaking opportunities,
