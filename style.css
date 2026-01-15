@@ -1,0 +1,217 @@
+
+html{
+    margin:1% 10%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* navigation */
+
+.primary-nav .nav-list{
+    padding:1%;
+    display:flex;
+    justify-content:space-between;
+    width:55%;
+    margin-left:-11px;
+}
+
+.primary-nav .nav-item{
+    list-style:none;
+    background-color:rgb(223,238,255);
+    padding:12px 18px;
+    border-radius:30px;
+}
+
+.primary-nav .nav-item a{
+    text-decoration:none;
+    color:blue;
+}
+
+/* info card  */
+
+.info-card{
+    padding:2%;
+    width:65%;
+    margin:3% 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+/* Gradient line before each section */
+#about::before,
+#schedule::before,
+#speakers::before,
+#registration::before,
+#contact::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    width:50px;
+    height:5px;
+    background:linear-gradient(to right,#2563eb,#ef4444);
+    border-radius:2px;
+}
+
+/* about  */
+
+.definition-list dd{
+    margin-left:0;
+}
+
+/* table */
+
+.styled-table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+.styled-table thead th{
+    text-align:left;
+    background-color:rgb(218,234,255);
+    padding:10px;
+}
+
+.table-caption{
+    padding:10px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.styled-table tbody tr:nth-child(even){
+    background-color:rgb(234, 235, 236);
+}
+
+.styled-table tbody tr:nth-child(odd){
+    background-color:white;
+}
+
+.styled-table tbody td{
+    padding:10px;
+}
+
+/* speaker article grid- */
+
+.speaker-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto auto;
+    gap:20px;
+}
+
+.speaker-grid .section-title{
+    grid-column:1 / 1;
+    text-align:center;
+    
+}
+
+#Alex-article{
+    margin-left: -70px;
+}
+.speaker-card{
+    border:0.5px solid gray;
+    padding:3%;
+    border-radius:10px;
+}
+
+.speaker-card h3{
+    padding-left:15px;
+}
+
+.speaker-card ul li{
+    margin-left:-20px;
+}
+
+/* form */
+
+.signup-form fieldset{
+    font-weight:700;
+    border-radius:9px;
+    border:0.5px solid rgb(199,199,199);
+    padding:1%;
+    margin-top:3%;
+}
+
+.signup-form legend{
+    margin-left:7px;
+}
+
+.signup-form label{
+    font-weight:500;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form select{
+    margin-top:8px;
+    border:0.5px solid gray;
+    border-radius:3px;
+    width:93%;
+    padding:10px;
+}
+
+.signup-form button{
+    padding:12px 18px;
+    background-color:rgba(45,93,252,0.95);
+    border:0;
+    border-radius:30px;
+    color:white;
+}
+
+#registration{
+    width: 65%;
+}
+
+
+/* contact */
+
+.footer-card{
+    margin-top:5%;
+}
+
+
+.footer-card::after{
+    content:"";
+    display:block;
+    height:2px;
+    background:black;
+    opacity:0.4;
+    margin-top:10px;
+}
+
+
+
+#contact{
+    position:absolute;
+    right:250px;   /* controls the gap */
+    top:1980px;
+    width:15%;
+    padding:10px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+
+/* Remove card effect from full footer, apply only to content part */
+#contact.footer-card{
+    margin-top:0;
+}
+
+.footer-card::after{
+    display:none;
+}
+
+
+#contact > p:last-of-type{   /* for the last paragraph */
+    position:static;
+    margin-top:80px;
+    padding-top:12px;
+    border-top:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    font-size:0.9rem;
+    color:#444;
+    width:100%;
+    box-shadow:none;
+    background:transparent;
+}
